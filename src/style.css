@@ -1,0 +1,141 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, ul, li, td {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font-size: 1.35rem;
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+.page-body {
+  margin: 0 auto;
+  max-width: 1500px;
+  display: flex;
+}
+#main {
+  flex: auto;
+  min-height: 500px;
+  margin-bottom: 50px;
+}
+.hr {
+  border-bottom: 1px solid #ccc;
+}
+.ul {
+  margin-left: 20px;
+}
+.ul li {
+  margin: 10px 0;
+}
+.ul-li-sstyle-none li {
+  list-style: none;
+  margin: 10px 0;
+}
+p.ac-center {
+  text-align: center;
+}
+p.ac-center > img {
+  margin: 5px;
+}
+
+.table-a {
+  border-collapse: collapse;
+}
+.table-a thead tr, .table-a tbody tr, .table-a tfoot tr {
+  text-align: center;
+}
+.table-a td {
+  padding: 10px;
+}
+.table-a td, .table-a th {
+  border: 1px solid #ccc;
+}
+
+.stress {
+  margin: 0 2px;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.gap-10px {
+  padding: 0 10px;
+}
+.img-content {
+  width: 500px;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  animation: main-1 2s;
+}
+
+.content {
+  padding: 20px;
+  margin: 80px 40px 0;
+  border-radius: 10px;
+  background-color: rgba(255, 245, 245, 0.5);
+  animation: main-1 2s;
+}
+.xjie-weather-icon {
+  display: flex;
+  margin: 100px 0 0;
+  justify-content: center;
+}
+.xjie-weather-icon img {
+  width: 120px;
+  margin: 0 30px;
+  animation: logo 2s;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    margin: 80px 20px 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .img-content {
+    max-width: 100%;
+  }
+}
+
+@keyframes logo {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes main-1 {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
