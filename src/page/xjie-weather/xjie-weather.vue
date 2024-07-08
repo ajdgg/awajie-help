@@ -84,7 +84,7 @@ import codeRenderer from '../../components/code-renderer.vue'
       </section>
       <section>
         <h1 id="配置" class="hr">配置</h1>
-        <h2>一</h2>
+        <h2 id="一">一</h2>
         <ul class="ul">
           <li>使用<span class="stress">st</span>命令交互式设置key</li>
         </ul>

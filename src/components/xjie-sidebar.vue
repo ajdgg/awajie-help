@@ -82,8 +82,8 @@ onMounted(() => {
     }
   }
 
-  console.log(headings.value);
-  console.log(headingsh2.value);
+  // console.log(headings.value);
+  // console.log(headingsh2.value);
 
 
 </script>
@@ -92,10 +92,10 @@ onMounted(() => {
   <div id="xjie-sidebar-content">
     <p>目录</p>
     <ul>
-      <li v-for="heading in headings">
+      <li v-for="(heading, index) in headings" :key="index">
         <a :href="'#' + heading">{{ heading }}</a>
         <ul v-if="headingsh2[heading].length > 0" class="xjie-sidebar-h2">
-          <li v-for="subheading in headingsh2[heading]">
+          <li v-for="(subheading, index) in headingsh2[heading]" :key="index">
             <a :href="'#' + subheading">{{ subheading }}</a>
           </li>
         </ul>
@@ -108,7 +108,7 @@ onMounted(() => {
 
 <style scoped>
 .xjie-sidebar {
-  z-index: 9999;
+  z-index: 9888;
   padding: 10px;
   background-color: #f5f5f5;
   position: relative;

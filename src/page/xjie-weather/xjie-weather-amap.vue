@@ -11,7 +11,7 @@
   <main id="main">
     <div id="xjie-content" class="content">
       <section>
-        <h1 class="hr">申请key</h1>
+        <h1 id="申请key" class="hr">申请key</h1>
         <p>进入<a href="https://lbs.amap.com">高德开发平台 https://lbs.amap.com</a></p>
         <img class="img-content" src="../../assets/JPEG/gd-1.jpg" alt="高德首页" />
         <p>登录或注册账号后进入控制台</p>
