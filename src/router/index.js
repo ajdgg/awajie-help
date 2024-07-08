@@ -26,6 +26,11 @@ const routes = [
                 component: () => import('../page/xjie-weather/xjie-weather-amap.vue'),
             },
         ]
+    },
+    {
+        path: '/:catchAll(.*)',
+        name: 'errorpage',
+        component: () => import('../page/404.vue')
     }
 ]
 const router = createRouter({
