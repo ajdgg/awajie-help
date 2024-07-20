@@ -25,6 +25,10 @@ const routes = [
                 path: 'amap',
                 component: () => import('../page/xjie-weather/xjie-weather-amap.vue'),
             },
+            {
+                path: 'update',
+                component: () => import('../page/xjie-weather/xjie-weather-update.vue'),
+            },
         ]
     },
     {

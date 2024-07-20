@@ -12,6 +12,12 @@ const copyContent = async () => {
   const parentElement = document.querySelector("#" + watid.value);
   let textToCopy = '';
 
+  // function removeTag(fragment) {
+  //   return (
+  //     new DOMParser().parseFromString(fragment, 'text/html').body.textContent || ''
+  //   );
+  // }
+
   function getTextFromNode(node) {
     if (node.nodeType === Node.TEXT_NODE) {
       return node.textContent.trim();
@@ -24,12 +30,16 @@ const copyContent = async () => {
     }
     return '';
   }
-
+  
   Array.from(parentElement.childNodes).forEach(node => {
     textToCopy += getTextFromNode(node) + '\n';
   });
 
+  // 去除最后一个换行符
   textToCopy = textToCopy.slice(0, -1);
+  // if (textToCopy.endsWith('\n')) {
+  //   textToCopy = textToCopy.slice(0, -1);
+  // }
 
   try {
     await navigator.clipboard.writeText(textToCopy);
@@ -59,7 +69,7 @@ const copyContent = async () => {
   padding: 10px 20px;
   margin: 10px 0;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 #parent-s {
   width: 15px;
