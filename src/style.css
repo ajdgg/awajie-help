@@ -43,6 +43,10 @@ a:hover {
 .hr {
   border-bottom: 1px solid #ccc;
 }
+.h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 .ul {
   margin-left: 20px;
 }
