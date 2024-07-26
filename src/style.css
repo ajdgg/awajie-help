@@ -15,6 +15,11 @@ html, body, ul, li, td, header, nav {
   margin: 0;
   padding: 0;
 }
+body {
+  height: 100%;
+  display: flex;  
+  flex-direction: column;
+}
 h2 {
   font-size: 1.35rem;
 }
@@ -31,9 +36,12 @@ a:hover {
 }
 
 .page-body {
+  width: 100%;
   margin: 0 auto;
   max-width: 1500px;
   display: flex;
+  flex: 1; /* 占据剩余空间 */  
+  overflow-y: auto;
 }
 #main {
   flex: auto;
@@ -58,9 +66,11 @@ a:hover {
   margin: 10px 0;
 }
 p.ac-center {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
-p.ac-center > img {
+p.ac-center > img, p.ac-center > a {
+  display: flex;
   margin: 5px;
 }
 

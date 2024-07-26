@@ -11,7 +11,11 @@ import xjieFooter from './components/xjie-footer.vue';
 
 <style>
 body {
-  padding-top: 80px;
   background-color: #9fe6fa;
+}
+#app {
+  display: flex;  
+  flex-direction: column;  
+  min-height: 100vh;
 }
 </style>

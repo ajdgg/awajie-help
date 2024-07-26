@@ -1,4 +1,12 @@
 <script setup>
+import { assignTextAsId } from '../../script/directory.js'
+import { onMounted } from 'vue';
+
+onMounted(() => {
+    const dom = document.getElementById('xjie-content');
+    if (!dom) return;
+    assignTextAsId(dom, 'directory');
+});
 </script>
 
 <template>

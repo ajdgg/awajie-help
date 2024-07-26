@@ -115,6 +115,10 @@ onMounted(() => {
         <img class="img-content" src="../../assets/JPEG/pz-bot-key.jpg" alt="设置key">
       </section>
       <section>
+        <h1 directory class="hr">最近更新</h1>
+        <router-link to="/xjie-weather/update">📑更新</router-link>
+      </section>
+      <section>
         <h1 directory class="hr">插件返回的天气预报图片效果</h1>
         <h2 directory-2>高德</h2>
         <p>高德地图返回的天气数据种类不多但对于只看个天气预报而已的完全够</p>

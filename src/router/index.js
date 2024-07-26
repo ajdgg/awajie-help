@@ -32,6 +32,23 @@ const routes = [
         ]
     },
     {
+        path: '/xjie-calc24/',
+        component: () => import('../page/xjie-calc24/xjie-calc24-router.vue'),
+        meta: {
+            title: 'nonebot-plugin-xjie-calc24'
+        },
+        children: [
+            {
+                path: '',
+                component: () => import('../page/xjie-calc24/xjie-calc24-index.vue')
+            },
+            {
+                path: 'update',
+                component: () => import('../page/xjie-calc24/xjie-calc24-update.vue'),
+            },
+        ]
+    },
+    {
         path: '/:catchAll(.*)',
         name: 'errorpage',
         component: () => import('../page/404.vue')

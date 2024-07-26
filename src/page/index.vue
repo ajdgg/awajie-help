@@ -1,27 +1,4 @@
 <script setup>
-// import { debounce } from '../script/debounce';
-// import { ref, onMounted, onBeforeUnmount } from 'vue';
-// const winwidth = ref(window.innerWidth);
-
-// const goldenRatio = (1 + Math.sqrt(5)) / 2;
-
-// const updateWinWidth = () => {
-//   winwidth.value = window.innerWidth;
-//   var element = document.getElementById('index-container');
-//   var width = element.offsetWidth;
-//   console.log(width / goldenRatio);
-// };
-
-
-
-// onMounted(() => {
-//   window.addEventListener('resize', debounce(updateWinWidth, 200));
-// });
-
-// onBeforeUnmount(() => {
-//   window.removeEventListener('resize', updateWinWidth);
-// });
-
 </script>
 
 <template>
@@ -29,11 +6,11 @@
   <main id="index-main">
     <div class="h1">帮助文档</div>
     <div id="index-container" class="container">
-      <!-- <router-link to="/calc24">
+      <router-link to="/xjie-calc24">
         <div class="nonebot-plugin">
           <span>nonebot-plugin-calc24</span>
         </div>
-      </router-link> -->
+      </router-link>
       <router-link to="/xjie-weather">
         <div class="nonebot-plugin">
           <span>nonebot-plugin-xjie-weather</span>
@@ -63,7 +40,7 @@
 }
 .nonebot-plugin {
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px 5px;
   border-radius: 10px;
   box-shadow: 1px 1px 5px #ccc;
   background-color: rgba(255, 245, 245, 0.5);
