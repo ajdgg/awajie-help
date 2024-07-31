@@ -1,10 +1,36 @@
 <script setup>
+import { onMounted, ref } from 'vue';
+let t = new Date();
+console.log(t);
+
+t = ref("已经运行了00天00小时00分钟00秒")
+
+function Time() {
+    let nowTimeq = new Date();
+    let setTimeq = new Date('2024/7/7');
+    let elapsedAllSecondsq = Math.floor((nowTimeq.getTime() - setTimeq.getTime()) / 1000);
+    let elapsedDaysq = Math.floor(elapsedAllSecondsq / (60 * 60 * 24));
+    let elapsedHoursq = Math.floor(elapsedAllSecondsq / (60 * 60) % 24);
+    let elapsedMinutesq = Math.floor(elapsedAllSecondsq / 60 % 60);
+    let elapsedSecondsq = Math.floor(elapsedAllSecondsq % 60);
+    t.value = `已经运行了${elapsedDaysq}天${elapsedHoursq}小时${elapsedMinutesq}分钟${elapsedSecondsq}秒`
+}
+
+onMounted(() => {
+    setInterval(function () {
+        Time();
+    }, 1000)
+})
 
 </script>
 
 <template>
     <footer id="footer" class="footer" ref="target">
-        &copy; 2024 awajie.top
+        <div id="time">{{ t }}</div>
+        <ul class="flex li-style-none flex-jc-center footer-ul-1 flex-wrap">
+            <li>&copy; 2024 awajie.top</li>
+            <li><a href="">闽IPC备2024016049号-1</a></li>
+        </ul>
     </footer>
 </template>
 
@@ -15,5 +41,8 @@
     padding: 20px 0;
     text-align: center;
     background-color: rgba(255, 245, 245, 0.5);
+}
+.footer-ul-1 li {
+    margin: 0 10px;
 }
 </style>
