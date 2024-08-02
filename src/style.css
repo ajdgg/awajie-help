@@ -11,6 +11,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --body-color: #9fe6fa;
+  --dynamic-svg-logo: #24D3FF;
+}
+
+
+[data-theme="dark"] {
+  --body-color: #09090a;
+  --dynamic-svg-logo: #eeeeee;
+}
+
 html, body, ul, li, td, header, nav {
   margin: 0;
   padding: 0;
@@ -19,6 +30,10 @@ body {
   height: 100%;
   display: flex;  
   flex-direction: column;
+}
+@font-face {
+  font-family: "almmInter";
+  src: url('./assets/fonts/AlimamaShuHeiTi-Bold.woff2') format('woff2');
 }
 h2 {
   font-size: 1.35rem;
