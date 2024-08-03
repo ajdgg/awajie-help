@@ -43,7 +43,7 @@
   margin-bottom: 50px;
   margin: 150px 30px 0;
   border-radius: 10px;
-  background-color: rgba(255, 245, 245, 0.5);
+  background-color: var(--index-main-bg-c);
 }
 .container {
   display: flex;
@@ -67,15 +67,15 @@
 .text {
 	  fill: none;
 	  stroke-width: 1;
-	  stroke-dasharray: 0 200;
+	  stroke-dasharray: 0 180;
 	  stroke-dashoffset: 0;
 	  stroke: var(--dynamic-svg-logo);
-	  animation: stroke 5s cubic-bezier(0.135, 0.590, 0.595, 0.990) forwards;  
+	  animation: stroke 3s cubic-bezier(0.135, 0.590, 0.595, 0.990) forwards;  
 	}
 	@keyframes stroke {
 	  100% {
 	    stroke-dashoffset: 200;
-	    stroke-dasharray: 100 0;
+	    stroke-dasharray: 200 0;
 	  }
 	}
 </style>

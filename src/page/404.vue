@@ -29,21 +29,22 @@ export default {
 </script>
 
 <template>
-  <main>
-    <div class="errorpage">
-      <p>您访问的页面不存在，请查看网络连接是否正常，或查看地址输入是否正确!</p>
-      <div class="errorpage-jump">
-        <router-link to="./" class="errorpage-manual-jump"
-          >点我回首页</router-link
-        >
-        <span style="margin: 0 5px">或</span>
-        <div>
-          <span id="jump-to-home">{{ countDown }}</span
-          ><span>秒后自动跳转</span>
+  <div class="page-body">
+    <main>
+      <div class="errorpage">
+        <p>您访问的页面不存在，请查看网络连接是否正常，或查看地址输入是否正确!</p>
+        <div class="errorpage-jump">
+          <router-link to="./" class="errorpage-manual-jump">点我回首页</router-link>
+          <span style="margin: 0 5px">或</span>
+          <div>
+            <span id="jump-to-home">{{ countDown }}</span>
+            <span>秒后自动跳转</span>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
+  </div>
+
 </template>
 
 <style scoped>

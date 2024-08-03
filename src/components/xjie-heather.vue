@@ -1,4 +1,5 @@
 <script setup>
+import themeHandoverButton from "../components/theme-handover-button.vue";
 import { onMounted, onUnmounted, ref, watchEffect } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
@@ -76,7 +77,10 @@ function handleScroll() {
         <!-- #:跳转链接 -->
                 <ul class="nav-menu">
                     <li class="nav-item nav-item-layout">
-                        <!-- <router-link to="/" class="nav-link">首页</router-link> -->
+                        <router-link to="/" class="nav-link">首页</router-link>
+                    </li>
+                    <li>
+                        <themeHandoverButton></themeHandoverButton>
                     </li>
                 </ul>
         <!-- 更多按钮 -->
@@ -101,7 +105,7 @@ function handleScroll() {
 .read_pro_inner {
     content: '';
     height: 100%;
-    background-color: #9fe6fa;
+    background-color: var(--header-Progress-bar-bgcolor);
 }
 .nav-menu li {
     list-style: none;
@@ -109,18 +113,19 @@ function handleScroll() {
 }
 .header {
     z-index: 9999;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--navbor-border-bottom-bgcolor);
+    /* border-bottom: 1px solid #e2e8f0; */
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 0 1px 1px #ececec;
+    box-shadow: 0 1px 1px var(--navbor-border-bottom-bgcolor);
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 7px;
-    background-color: #fff;
+    background-color: var(--navbar-bgcolor);
 }
 .navbar-one {
     display: flex;
@@ -138,7 +143,7 @@ function handleScroll() {
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background-color: #101010;
+    background-color: var(--navbar-icon-bgcolor);
 }
 .nav-menu {
     display: flex;

@@ -12,14 +12,42 @@
 }
 
 :root {
-  --body-color: #9fe6fa;
-  --dynamic-svg-logo: #24D3FF;
-}
+  --font-color: #000000;
 
+  --body-bgcolor: #9fe6fa;
+  --index-main-bg-c: rgba(255, 245, 245, 0.5);
+  --dynamic-svg-logo: #24D3FF;
+
+  --articles-content-bgcolor: rgba(255, 245, 245, 0.5);
+
+  --xjie-sidebar-bgcolor: #C4F2FF;
+
+  --navbar-bgcolor: #fff;
+  --navbar-icon-bgcolor: #101010;
+  --navbor-border-bottom-bgcolor: #e6e6e6;
+  --header-Progress-bar-bgcolor: #9fe6fa;
+
+  --footer-bgcolor: rgba(255, 245, 245, 0.5);
+}
+/* 1b1c1e */
 
 [data-theme="dark"] {
-  --body-color: #09090a;
+  --font-color: #ffffff;
+
+  --body-bgcolor: #252525;
+  --index-main-bg-c: rgba(0, 0, 0, 0.2);
   --dynamic-svg-logo: #eeeeee;
+
+  --articles-content-bgcolor: rgba(255, 245, 245, 0.2);
+
+  --xjie-sidebar-bgcolor: #524F4F;
+
+  --navbar-bgcolor: #1b1c1e;
+  --navbar-icon-bgcolor: #fefefe;
+  --navbor-border-bottom-bgcolor: #232427;
+  --header-Progress-bar-bgcolor: #9fe6fa;
+
+  --footer-bgcolor: rgba(0, 0, 0, 0.2);
 }
 
 html, body, ul, li, td, header, nav {
@@ -30,6 +58,7 @@ body {
   height: 100%;
   display: flex;  
   flex-direction: column;
+  transition: background-color .25s;
 }
 @font-face {
   font-family: "almmInter";
@@ -46,6 +75,10 @@ a {
 a:hover {
   color: #535bf2;
 }
+button {
+  background-color: #fff;
+  border: 0 solid #fff;
+}
 .hover-EDEDED:hover {
   background-color: #EDEDED;
 }
@@ -57,7 +90,7 @@ a:hover {
   margin: 0 auto;
   max-width: 1500px;
   display: flex;
-  flex: 1; /* 占据剩余空间 */  
+  flex: 1;
   overflow-y: auto;
 }
 #main {
@@ -122,7 +155,7 @@ p.ac-center > img, p.ac-center > a {
   color: white;
   font-size: 40px;
   font-weight: bold;
-  animation: main-1 2s;
+  animation: main-1 1s;
 }
 
 .flex {
@@ -140,9 +173,9 @@ p.ac-center > img, p.ac-center > a {
 
 .content {
   padding: 20px;
-  margin: 80px 40px 0;
+  margin: 0 40px 0;
   border-radius: 10px;
-  background-color: rgba(255, 245, 245, 0.5);
+  background-color: var(--articles-content-bgcolor);
   animation: main-1 2s;
 }
 .xjie-weather-icon {

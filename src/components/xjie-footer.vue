@@ -1,7 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 let t = new Date();
-console.log(t);
 
 t = ref("已经运行了00天00小时00分钟00秒")
 
@@ -40,7 +39,7 @@ onMounted(() => {
     margin-top: 150px;
     padding: 20px 0;
     text-align: center;
-    background-color: rgba(255, 245, 245, 0.5);
+    background-color: var(--footer-bgcolor);
 }
 .footer-ul-1 li {
     margin: 0 10px;

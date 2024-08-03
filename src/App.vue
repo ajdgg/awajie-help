@@ -11,7 +11,8 @@ import xjieFooter from './components/xjie-footer.vue';
 
 <style>
 body {
-  background-color: var(--body-color);
+  background-color: var(--body-bgcolor);
+  color: var(--font-color);
 }
 #app {
   display: flex;  
