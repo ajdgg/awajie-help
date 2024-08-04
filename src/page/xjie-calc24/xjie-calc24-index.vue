@@ -22,6 +22,9 @@ onMounted(() => {
         <div id="xjie-content" class="content">
             <p class="ac-center">✨ NoneBot 插件简单描述 ✨</p>
             <p class="ac-center">
+                <a href="https://github.com/ajdgg/nonebot-plugin-calc24">
+                    <img alt="Static Badge" src="https://img.shields.io/badge/nonebot--plugin--calc24-1?style=flat&logo=github&labelColor=%23515151&color=%23515151">
+                </a>
                 <img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="python">
                 <a href="https://pypi.org/project/nonebot-plugin-calc24">
                     <img src="https://img.shields.io/pypi/v/nonebot-plugin-calc24?logo=python&logoColor=edb641" alt="pypi">

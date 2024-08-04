@@ -7,7 +7,7 @@ const routes = [
         path: '/',
         component: Index,
         meta: {
-            title: 'awesome wajie-help'
+            title: 'awesome ajie-help'
         }
     },
     {

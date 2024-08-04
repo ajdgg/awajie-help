@@ -9,7 +9,6 @@ const navMenu = ref(null);
 const navLinks = ref([]);
 
 const route = useRoute();
-const router = useRouter();
 
 activeRoute.value = route.path;
 
@@ -79,7 +78,7 @@ function handleScroll() {
                     <li class="nav-item nav-item-layout">
                         <router-link to="/" class="nav-link">首页</router-link>
                     </li>
-                    <li>
+                    <li class="nav-item nav-item-layout">
                         <themeHandoverButton></themeHandoverButton>
                     </li>
                 </ul>
@@ -150,7 +149,7 @@ function handleScroll() {
     justify-content: space-between;
 }
 .nav-item {
-    margin-left: 5rem;
+    margin-left: 2rem;
 }
 .nav-item-layout {
     display: flex;
@@ -159,7 +158,7 @@ function handleScroll() {
     display: flex;
     align-items: center;
     font-weight: 400;
-    color: #475569;
+    color: var(--nav-link-color);
 }
 .nav-link:hover {
     color: #ccc;
@@ -184,7 +183,7 @@ function handleScroll() {
         top: 60px;
         display: flex;
         flex-direction: column;
-        background-color: #fff;
+        background-color: var(--nav-menu-bgcolor);
         width: 100%;
         border-radius: 10px;
         transition: all 0.3s;

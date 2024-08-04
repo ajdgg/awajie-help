@@ -70,23 +70,55 @@ if (currentSectionId !== null && h2sInCurrentSection.length > 0) {
   // console.log(headings.value);
   // console.log(headingsh2.value);
 
+const navHeight = 60;
+
+window.addEventListener('hashchange', function() {
+    const hash = decodeURIComponent(window.location.hash);
+    if (hash) {
+        setTimeout(function() {
+            const element = document.querySelector(hash);
+            if (element) {
+                window.scrollTo({
+                    top: element.offsetTop - navHeight,
+                    behavior: 'smooth'
+                });
+            }
+        }, 0);
+    }
+});
+
+window.onload = function() {
+    const hash = decodeURIComponent(window.location.hash);
+    if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+            window.scrollTo({
+                top: element.offsetTop - navHeight,
+                behavior: 'smooth'
+            });
+        }
+    }
+};
+
 </script>
 <template>
 <div class="xjie-sidebar" :style="{ height: xjieSidebarHeight + 'px', transform: `translateX(${xjieSidebarShow})` }">
-  <div id="xjie-sidebar-content">
-    <p>目录</p>
-    <ul>
-      <li v-for="(heading, index) in headings" :key="index">
-        <a :href="'#' + heading">{{ heading }}</a>
-        <ul v-if="headingsh2[heading].length > 0" class="xjie-sidebar-h2">
-          <li v-for="(subheading, index) in headingsh2[heading]" :key="index">
-            <a :href="'#' + subheading">{{ subheading }}</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
+  <div class="xjie-sidebar-k">
+    <div id="xjie-sidebar-content">
+      <p>目录</p>
+      <ul>
+        <li v-for="(heading, index) in headings" :key="index">
+          <a :href="'#' + heading">{{ heading }}</a>
+          <ul v-if="headingsh2[heading].length > 0" class="xjie-sidebar-h2">
+            <li v-for="(subheading, index) in headingsh2[heading]" :key="index">
+              <a :href="'#' + subheading">{{ subheading }}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <span id="xjie-sidebar-btn" @click="xjieSidebarBtnClick()">></span>
   </div>
-  <span id="xjie-sidebar-btn" @click="xjieSidebarBtnClick()">></span>
 </div>
 </template>
 
@@ -94,11 +126,15 @@ if (currentSectionId !== null && h2sInCurrentSection.length > 0) {
 .xjie-sidebar {
   width: 200px;
   z-index: 9888;
-  padding: 10px;
-  background-color: var(--xjie-sidebar-bgcolor);
-  position: relative;
+  position: sticky;
+  top: 70px;
   transition: transform 1s;
+}
+.xjie-sidebar-k {
+  padding: 10px;
+  position: relative;
   border-radius: 0 10px 10px 0;
+  background-color: var(--xjie-sidebar-bgcolor);
 }
 #xjie-sidebar-content {
   border: 1px solid transparent;
@@ -123,11 +159,11 @@ if (currentSectionId !== null && h2sInCurrentSection.length > 0) {
 #xjie-sidebar-content li{
   margin: 5px 0;
 }
-/* @media screen and (min-width: 1025px) {
-  .xjie-sidebar {
-    margin-top: 20dvh;
+@media screen and (min-width: 1500px) {
+  .xjie-sidebar-k {
+    border-radius: 10px;
   }
-} */
+}
 @media screen and (max-width: 1024px) {
   .xjie-sidebar {
     position: fixed;
