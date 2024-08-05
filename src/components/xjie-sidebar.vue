@@ -11,12 +11,48 @@ if (window.innerWidth < 1024) {
   xjieSidebarShow.value = "-100%";
 }
 
+const navHeight = 60;
+
+let hashChangeListener = null;
+
+function handleHashChange() {
+  const hash = decodeURIComponent(window.location.hash);
+  if (hash) {
+    setTimeout(() => {
+      const element = document.querySelector(hash);
+      if (element) {
+        window.scrollTo({
+          top: element.offsetTop - navHeight,
+          behavior: 'smooth'
+        });
+      }
+    }, 0);
+  }
+}
+
+function checkHashOnLoad() {
+  const hash = decodeURIComponent(window.location.hash);
+  if (hash) {
+    const element = document.querySelector(hash);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - navHeight,
+        behavior: 'smooth'
+      });
+    }
+  }
+}
+
 const updateSidebarHeight = () => {
-  const xjieSidebarContent = document.getElementById('xjie-sidebar-content');
-  setTimeout(() => {
-    const rect = xjieSidebarContent.getBoundingClientRect();
-    xjieSidebarHeight.value = rect.height;
-  }, 0);
+    const xjieSidebarContent = document.getElementById('xjie-sidebar-content');
+    if (xjieSidebarContent) {
+    setTimeout(() => {
+      const rect = xjieSidebarContent.getBoundingClientRect();
+      if (rect) {
+        xjieSidebarHeight.value = rect.height;
+      }
+    }, 0);
+  }
 };
 
 onMounted(() => {
@@ -51,10 +87,15 @@ if (currentSectionId !== null && h2sInCurrentSection.length > 0) {
 
   window.addEventListener('resize', debounce(updateSidebarHeight, 200));
 
-  });
+  hashChangeListener = handleHashChange;
+  window.addEventListener('hashchange', hashChangeListener);
+  checkHashOnLoad();
+
+});
 
   onBeforeUnmount(() => {
     window.removeEventListener('resize', debounce(updateSidebarHeight, 200));
+    window.removeEventListener('hashchange', hashChangeListener);
   });
 
   function xjieSidebarBtnClick() {
@@ -69,37 +110,6 @@ if (currentSectionId !== null && h2sInCurrentSection.length > 0) {
 
   // console.log(headings.value);
   // console.log(headingsh2.value);
-
-const navHeight = 60;
-
-window.addEventListener('hashchange', function() {
-    const hash = decodeURIComponent(window.location.hash);
-    if (hash) {
-        setTimeout(function() {
-            const element = document.querySelector(hash);
-            if (element) {
-                window.scrollTo({
-                    top: element.offsetTop - navHeight,
-                    behavior: 'smooth'
-                });
-            }
-        }, 0);
-    }
-});
-
-window.onload = function() {
-    const hash = decodeURIComponent(window.location.hash);
-    if (hash) {
-        const element = document.querySelector(hash);
-        if (element) {
-            window.scrollTo({
-                top: element.offsetTop - navHeight,
-                behavior: 'smooth'
-            });
-        }
-    }
-};
-
 </script>
 <template>
 <div class="xjie-sidebar" :style="{ height: xjieSidebarHeight + 'px', transform: `translateX(${xjieSidebarShow})` }">

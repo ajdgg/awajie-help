@@ -1,8 +1,11 @@
 <script setup>
 import themeHandoverButton from "../components/theme-handover-button.vue";
-import { onMounted, onUnmounted, ref, watchEffect } from "vue";
+import { onMounted, onUnmounted, ref, watchEffect, inject } from "vue";
 import { useRoute, useRouter } from "vue-router";
+import logoA from '../assets/AwajieLogo.svg'
+import logoB from '../assets/AwajieLogo-dark.svg'
 
+const eventBus = inject('eventBus');
 const activeRoute = ref(null);
 const hamburger = ref(null);
 const navMenu = ref(null);
@@ -38,6 +41,9 @@ onMounted(() => {
     });
 
     window.addEventListener("scroll", handleScroll);
+
+    initLogoSrc();
+    eventBus.addEventListener('theme-switched', onThemeSwitched);
 });
 
 onUnmounted(() => {
@@ -48,6 +54,8 @@ onUnmounted(() => {
     });
 
     window.removeEventListener("scroll", handleScroll);
+
+    eventBus.removeEventListener('theme-switched', onThemeSwitched);
 });
 
 function handleScroll() {
@@ -59,6 +67,15 @@ function handleScroll() {
         progress.style.width = ((scrollTop / (scrollHeight - clientHeight)) * 100).toFixed(2) + "%";
     }
 }
+
+const logoSrc = ref('');
+function initLogoSrc() {
+    const isDark = document.body.getAttribute('data-theme') === 'dark';
+    logoSrc.value = isDark ? logoB : logoA;
+}
+function onThemeSwitched() {
+    initLogoSrc();
+}
 </script>
 
 <template>
@@ -68,9 +85,9 @@ function handleScroll() {
         </div>
         <nav class="navbar">
             <div class="navbar-one">
-                <div class="header-order1 hover-EDEDED">
+                <div class="header-order1 hover-logo-bgcolor">
                     <router-link to="/" class="nav-link">
-                        <img src="../assets/AwajieLogo.svg" alt=""  width="30px" height="30px" />
+                        <img :src="logoSrc" alt=""  width="30px" height="30px" />
                     </router-link>
                 </div>
         <!-- #:跳转链接 -->
@@ -171,6 +188,7 @@ function handleScroll() {
     border-radius: 5px;
     transition: all 0.5s;
 }
+
 @media only screen and (max-width: 1200px) {
     .hamburger {
         display: block;

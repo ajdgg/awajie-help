@@ -1,5 +1,7 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, inject } from 'vue'
+
+const eventBus = inject('eventBus');
 
 const buttonImg = ref(true)
 
@@ -34,6 +36,7 @@ function click() {
         localStorage.setItem('theme', true);
         buttonImg.value = true
     }
+    eventBus.dispatchEvent(new Event('theme-switched'));
 }
 
 </script>

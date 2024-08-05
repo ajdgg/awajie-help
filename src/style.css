@@ -21,7 +21,7 @@
 
   --articles-content-bgcolor: rgba(255, 245, 245, 0.5);
 
-  --xjie-sidebar-bgcolor: #C4F2FF;
+  --xjie-sidebar-bgcolor: #E4EAEF;
 
   --theme-button-svg-fill: #2d2d2d;
   --theme-button-bgcolor: #eeeeef;
@@ -31,6 +31,7 @@
   --nav-menu-bgcolor: #fff;
   --nav-link-color: #475569;
   --navbar-icon-bgcolor: #101010;
+  --nav-hover-logo-bgcolor: #EDEDED;
   --navbor-border-bottom-bgcolor: #e6e6e6;
   --header-Progress-bar-bgcolor: #9fe6fa;
 
@@ -62,6 +63,7 @@
   --nav-menu-bgcolor: #524F4F;
   --nav-link-color: #bac6d6;
   --navbar-icon-bgcolor: #fefefe;
+  --nav-hover-logo-bgcolor: #635F5F;
   --navbor-border-bottom-bgcolor: #232427;
   --header-Progress-bar-bgcolor: #9fe6fa;
 
@@ -97,8 +99,8 @@ button {
   background-color: #fff;
   border: 0 solid #fff;
 }
-.hover-EDEDED:hover {
-  background-color: #EDEDED;
+.hover-logo-bgcolor:hover {
+  background-color: var(--nav-hover-logo-bgcolor);
 }
 .li-style-none {
   list-style: none;

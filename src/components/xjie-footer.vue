@@ -28,7 +28,7 @@ onMounted(() => {
         <div id="time">{{ t }}</div>
         <ul class="flex li-style-none flex-jc-center footer-ul-1 flex-wrap">
             <li>&copy; 2024 awajie.top</li>
-            <li><a href="">闽IPC备2024016049号-1</a></li>
+            <li><a href="http://beian.miit.gov.cn/">闽ICP备2024064560号-1</a></li>
         </ul>
     </footer>
 </template>

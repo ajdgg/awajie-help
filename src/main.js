@@ -13,6 +13,7 @@ router.beforeEach((to, from, next) => {
     next();
 });
 
+app.provide('eventBus', new EventTarget());
 app.component('xjie-sidebar', XjieSidebar)
 app.use(router)
 app.mount('#app')

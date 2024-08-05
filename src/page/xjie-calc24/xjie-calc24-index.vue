@@ -21,7 +21,7 @@ onMounted(() => {
     <main id="main">
         <div id="xjie-content" class="content">
             <p class="ac-center">✨ NoneBot 插件简单描述 ✨</p>
-            <p class="ac-center">
+            <p class="ac-center flex-wrap">
                 <a href="https://github.com/ajdgg/nonebot-plugin-calc24">
                     <img alt="Static Badge" src="https://img.shields.io/badge/nonebot--plugin--calc24-1?style=flat&logo=github&labelColor=%23515151&color=%23515151">
                 </a>

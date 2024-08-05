@@ -16,9 +16,22 @@ onMounted(() => {
             <div id="xjie-content" class="content">
                 <ul id="ul">
                     <li>
-                        <div directory>24-7-11</div>
+                        <div directory>2024-8-2</div>
                         <ul>
-                            <li>完成对插件设置部分进行重构</li>
+                            <li>更改插件的模式储存方式,实现持续存储</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div directory>2024-05-26</div>
+                        <ul>
+                            <li>更新模式切换判断</li>
+                            <li>└ 缺点：插件在自己或bot重启后会默认关闭连续模式</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div directory>2024-05-19</div>
+                        <ul>
+                            <li>添加是否进行连续回答模式</li>
                         </ul>
                     </li>
                 </ul>
