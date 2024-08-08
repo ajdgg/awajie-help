@@ -49,6 +49,20 @@ const routes = [
         ]
     },
     {
+        path: '/entertainment/',
+        component: () => import('../page/entertainment/entertainment-router.vue'),
+        children: [
+            {
+                path: '',
+                component: () => import('../page/entertainment/ikun.vue'),
+            },
+            {
+                path: 'ikun',
+                component: () => import('../page/entertainment/ikun.vue'),
+            }
+        ]
+    },
+    {
         path: '/:catchAll(.*)',
         name: 'errorpage',
         component: () => import('../page/404.vue')

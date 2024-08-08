@@ -36,6 +36,8 @@
   --header-Progress-bar-bgcolor: #9fe6fa;
 
   --footer-bgcolor: rgba(255, 245, 245, 0.5);
+
+  --Carousel-span-bgcolor: rgba(255, 245, 245, 0.5);
 }
 /* 1b1c1e
 #E2E3E4
@@ -68,6 +70,8 @@
   --header-Progress-bar-bgcolor: #9fe6fa;
 
   --footer-bgcolor: rgba(0, 0, 0, 0.2);
+
+  --Carousel-span-bgcolor: #333;
 }
 
 html, body, ul, li, td, header, nav {

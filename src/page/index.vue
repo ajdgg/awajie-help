@@ -39,6 +39,96 @@
         </div>
       </router-link>
     </div>
+
+    <!-- 轮播图 -->
+    <!-- 先这样后面再改--懒 -->
+    <div style="margin-top: 50px;">
+      <h1 class="h1">不知道干什么的</h1>
+      <div class="Carousel" style="--t: 20s">
+        <div>
+          <span>awesomeajie</span>
+          <span>小杰</span>
+          <span>有兽档案馆</span>
+          <span>柏葉</span>
+          <span>小杰和風</span>
+          <span>awajie</span>
+          <span>两啤战神</span>
+          <span>有兽焉</span>
+          <span>awa</span>
+          <span>不知道写什么</span>
+          <span>顶呱呱的阿杰</span>
+        </div>
+        <div>
+          <span>awesomeajie</span>
+          <span>小杰</span>
+          <span>有兽档案馆</span>
+          <span>柏葉</span>
+          <span>小杰和風</span>
+          <span>awajie</span>
+          <span>两啤战神</span>
+          <span>有兽焉</span>
+          <span>awa</span>
+          <span>不知道写什么</span>
+          <span>顶呱呱的阿杰</span>
+        </div>
+      </div>
+      <div class="Carousel" style="--t: 50s">
+        <div>
+          <span>awesomeajie</span>
+          <span>小杰</span>
+          <span>有兽档案馆</span>
+          <span>柏葉</span>
+          <span>小杰和風</span>
+          <span>awajie</span>
+          <span>两啤战神</span>
+          <span>有兽焉</span>
+          <span>awa</span>
+          <span>不知道写什么</span>
+          <span>顶呱呱的阿杰</span>
+        </div>
+        <div>
+          <span>awesomeajie</span>
+          <span>小杰</span>
+          <span>有兽档案馆</span>
+          <span>柏葉</span>
+          <span>小杰和風</span>
+          <span>awajie</span>
+          <span>两啤战神</span>
+          <span>有兽焉</span>
+          <span>awa</span>
+          <span>不知道写什么</span>
+          <span>顶呱呱的阿杰</span>
+        </div>
+      </div>
+      <div class="Carousel" style="--t: 30s">
+        <div>
+          <span>awesomeajie</span>
+          <span>小杰</span>
+          <span>有兽档案馆</span>
+          <span>柏葉</span>
+          <span>小杰和風</span>
+          <span>awajie</span>
+          <span>两啤战神</span>
+          <span>有兽焉</span>
+          <span>awa</span>
+          <span>不知道写什么</span>
+          <span>顶呱呱的阿杰</span>
+        </div>
+        <div>
+          <span>awesomeajie</span>
+          <span>小杰</span>
+          <span>有兽档案馆</span>
+          <span>柏葉</span>
+          <span>小杰和風</span>
+          <span>awajie</span>
+          <span>两啤战神</span>
+          <span>有兽焉</span>
+          <span>awa</span>
+          <span>不知道写什么</span>
+          <span>顶呱呱的阿杰</span>
+        </div>
+      </div>
+    </div>
   </main>
 </div>
 
@@ -56,10 +146,10 @@
   flex: auto;
   padding: 10px;
   min-height: 500px;
-  margin-bottom: 50px;
   margin: 150px 30px 0;
   border-radius: 10px;
   background-color: var(--index-main-bg-c);
+  overflow: hidden;
 }
 .container {
   display: flex;
@@ -109,5 +199,53 @@
 }
 .good-looking-text {
   margin: 0 10px;
+}
+
+/* 轮播图 */
+.Carousel {
+  display: flex;
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%,transparent);
+}
+.Carousel div {
+  white-space: nowrap;
+  animation: animate var(--t) linear infinite;
+}
+.Carousel div:nth-child(2) {
+  animation: animate2 var(--t) linear infinite;
+  animation-delay: calc(var(--t) / -2);
+}
+.Carousel div span {
+  display: inline-flex;
+  margin: 10px;
+  letter-spacing: .2em;
+  background-color: var(--Carousel-span-bgcolor);
+  /* color: #fff; */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+@keyframes animate {
+  from {
+    transform: translate(100%);
+  }
+  to {
+    transform: translate(-100%);
+  }
+}
+@keyframes animate2 {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-200%);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #index-main {
+    margin: 150px 15px 0;
+  }
 }
 </style>
