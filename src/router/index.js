@@ -63,6 +63,11 @@ const routes = [
         ]
     },
     {
+        path: '/doc',
+        name: 'doc',
+        component: () => import('../page/doc.vue')
+    },
+    {
         path: '/:catchAll(.*)',
         name: 'errorpage',
         component: () => import('../page/404.vue')

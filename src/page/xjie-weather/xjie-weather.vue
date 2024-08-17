@@ -15,7 +15,7 @@ onMounted(() => {
   <img src="../../assets/AwajieLogo.svg" alt="awajie-logo" />
   <img src="../../assets/nonebot.png" alt="nonebot-logo" />
 </div>
-<h1 class="title">nonebot-plugin-xjie-weather</h1>
+
 <div class="page-body">
   <xjie-sidebar/>
   <main id="main" class="xjie-weather">

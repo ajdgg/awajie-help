@@ -1,7 +1,8 @@
 <script setup>
-import { onMounted, onBeforeUnmount, ref } from 'vue';
+import { onMounted, onBeforeUnmount, ref, inject } from 'vue';
 import { debounce } from '../script/debounce.js'
 
+const eventBus = inject('eventBus');
 const xjieSidebarHeight = ref(0);
 const headings = ref([]);
 const headingsh2 = ref({});
@@ -55,7 +56,11 @@ const updateSidebarHeight = () => {
   }
 };
 
-onMounted(() => {
+onMounted(async () => {
+  Sidecolumnrecord()
+  eventBus.addEventListener('kx-doc-loaded', Sidecolumnrecord);
+});
+function Sidecolumnrecord() {
   const xjieContent = document.getElementById('xjie-content');
   if (!xjieContent) return;
 
@@ -77,11 +82,11 @@ onMounted(() => {
 
     headingsh2.value[currentSectionId] = h2sInCurrentSection;
     h2sInCurrentSection = [];
-});
+  });
 
-if (currentSectionId !== null && h2sInCurrentSection.length > 0) {
-    headingsh2.value[currentSectionId] = h2sInCurrentSection;
-}
+  if (currentSectionId !== null && h2sInCurrentSection.length > 0) {
+      headingsh2.value[currentSectionId] = h2sInCurrentSection;
+  }
 
   updateSidebarHeight();
 
@@ -90,12 +95,13 @@ if (currentSectionId !== null && h2sInCurrentSection.length > 0) {
   hashChangeListener = handleHashChange;
   window.addEventListener('hashchange', hashChangeListener);
   checkHashOnLoad();
+}
 
-});
 
   onBeforeUnmount(() => {
     window.removeEventListener('resize', debounce(updateSidebarHeight, 200));
     window.removeEventListener('hashchange', hashChangeListener);
+    eventBus.removeEventListener('kx-doc-loaded', Sidecolumnrecord);
   });
 
   function xjieSidebarBtnClick() {
