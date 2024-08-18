@@ -38,6 +38,11 @@
           <span>nonebot-plugin-xjie-weather</span>
         </div>
       </router-link>
+      <router-link to="/doc?id=xjie-weather&file=index">
+        <div class="nonebot-plugin">
+          <span>weather</span>
+        </div>
+      </router-link>
     </div>
 
     <!-- 轮播图 -->
