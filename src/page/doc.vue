@@ -34,7 +34,8 @@ onMounted( async() => {
     const userFile = route.query.file
     const filePath = `/mddoc/${userId ? `${userId}/` : ''}${userFile}.md`;
     console.log(filePath)
-    setPageTitle(mdRouter[userId][userFile]['title'])
+    let docTitile = mdRouter[userId][userFile]['title']
+    setPageTitle(docTitile)
     await readFile(filePath);
     const dom = document.getElementById('xjie-content');
     if (!dom) return;
@@ -50,7 +51,7 @@ onMounted( async() => {
         <xjieSidebarCopy />
         <main id="main">
             <div id="xjie-content" class="content">
-                <div v-html="renderedMarkdown" id="mdcontent"></div>
+                <div id="mdcontent"></div>
             </div>
         </main>
     </div>
