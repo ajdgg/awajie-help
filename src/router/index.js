@@ -1,8 +1,9 @@
 import * as Vue from 'vue'
+import { RedirectionRouter } from "./md-router.js"
 import {createRouter,createWebHashHistory, createWebHistory} from "vue-router";
 import Index from '../page/index.vue'
 import XjieWeatherIndex from "../page/xjie-weather/xjie-weather-index.vue";
-const routes = [
+const VueRouter = [
     {
         path: '/',
         component: Index,
@@ -73,6 +74,7 @@ const routes = [
         component: () => import('../page/404.vue')
     }
 ]
+const routes = VueRouter.concat(RedirectionRouter);
 const router = createRouter({
     // history:createWebHashHistory(),
     // routes

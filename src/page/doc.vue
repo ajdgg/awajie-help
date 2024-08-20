@@ -12,6 +12,10 @@ const renderedMarkdown = ref('');
 
 const fileContent = ref('');
 
+function getObjectValue(obj, key, defaultValue = undefined) {
+  return Object.prototype.hasOwnProperty.call(obj, key) ? obj[key] : defaultValue;
+}
+
 const readFile = async (filePath) => {
   try {
     const response = await fetch(filePath);
@@ -19,7 +23,6 @@ const readFile = async (filePath) => {
       throw new Error(`Failed to fetch file: ${response.status}`);
     }
     const text = await response.text();
-    // console.log(text);
     fileContent.value = text;
   } catch (error) {
     console.error('Error reading file:', error);

@@ -24,3 +24,8 @@ const mdRouter = {
 
 export { mdRouter };
 
+const RedirectionRouter = [
+    { path: '/mdl', redirect: '/doc?id=xjie-weather&file=index' },
+]
+
+export { RedirectionRouter }
