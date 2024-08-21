@@ -29,6 +29,7 @@ onMounted(() => {
         <ul class="flex li-style-none flex-jc-center footer-ul-1 flex-wrap">
             <li>&copy; 2024 awajie.top</li>
             <li><a href="http://beian.miit.gov.cn/">闽ICP备2024064560号-1</a></li>
+            <li><a class="flex" href="https://beian.mps.gov.cn/#/query/webSearch"><span class="beian"></span>闽公网安备35050502100032号</a></li>
         </ul>
     </footer>
 </template>
@@ -43,5 +44,12 @@ onMounted(() => {
 }
 .footer-ul-1 li {
     margin: 0 10px;
+}
+.beian {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    background: url(../assets/beian.png) no-repeat center center / 100%;
 }
 </style>
