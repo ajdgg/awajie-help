@@ -1,8 +1,8 @@
 <div align="center" style="padding-top: 60px">
 
-<img width = "100px" style="margin-right: 40px" src="../../../src/assets/AwajieLogo.svg">
+<img width = "100px" style="margin-right: 40px" src="../../image/AwajieLogo.svg">
 <a width= "100px" href="https://v2.nonebot.dev/store">
-  <img src="../../../src/assets/nonebot.png" width="100" alt="NoneBotPluginLogo">
+  <img src="../../image/nonebot.png" width="100" alt="NoneBotPluginLogo">
 </a>
 
 <h1 class="title">nonebot-plugin-calc24</h1>

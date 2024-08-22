@@ -27,7 +27,8 @@ onMounted(() => {
     <footer id="footer" class="footer" ref="target">
         <div id="time">{{ t }}</div>
         <ul class="flex li-style-none flex-jc-center footer-ul-1 flex-wrap">
-            <li>&copy; 2024 awajie.top</li>
+            <li>BUG反馈：awesomeajie@qq.com</li>
+            <li>Copyright &copy; 2024 AwAjie</li>
             <li><a href="http://beian.miit.gov.cn/">闽ICP备2024064560号-1</a></li>
             <li><a class="flex" href="https://beian.mps.gov.cn/#/query/webSearch"><span class="beian"></span>闽公网安备35050502100032号</a></li>
         </ul>

@@ -1,8 +1,8 @@
 <div align="center">
 
-<img width = "100px" style="margin-right: 40px" src="../../../src/assets/AwajieLogo.svg">
+<img width = "100px" style="margin-right: 40px" src="../../image/AwajieLogo.svg">
 <a width= "100px" href="https://v2.nonebot.dev/store">
-  <img src="../../../src/assets/nonebot.png" width="100" alt="NoneBotPluginLogo">
+  <img src="../../image/nonebot.png" width="100" alt="NoneBotPluginLogo">
 </a>
 
 
@@ -65,7 +65,7 @@ default_api     优先使用的平台
 
 手动填入的话平台名为上面的key名
 ```
-![st](../../src/assets/JPEG/pz-bot-key.jpg)
+![st](../../image/JPEG/pz-bot-key.jpg)
 
 
 # 平台key获取
@@ -81,12 +81,12 @@ default_api     优先使用的平台
 
 毕竟高德调用的次数挺多的
 
-![高德](../../src/assets/JPEG/gd-4.jpg)
+![高德](../../image/JPEG/gd-4.jpg)
 
 ## 和风天气
 好看
 
-![和风](../../src/assets/JPEG/hf-1.jpg)
+![和风](../../image/JPEG/hf-1.jpg)
 
 ## 韩小韩WebAPI接口（天气）
 
@@ -96,4 +96,4 @@ default_api     优先使用的平台
 
 该api的支持还在优化，最好是测试一下awa。
 
-![韩小韩WebAPI接口（天气）](../../src/assets/JPEG/VVhanweather.jpg)
+![韩小韩WebAPI接口（天气）](../../image/JPEG/VVhanweather.jpg)
