@@ -1,3 +1,8 @@
+<!--
+ * @coding: UTF-8
+ * @Author: AwAjie
+ * @Date: 2024-07-22 21:44:47
+-->
 <script setup>
 import { onMounted, ref } from 'vue';
 let t = new Date();
@@ -48,8 +53,7 @@ onMounted(() => {
 }
 .beian {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 15px;
     margin: 0 5px;
     background: url(../assets/beian.png) no-repeat center center / 100%;
 }

@@ -1,3 +1,11 @@
+<!--
+ * @Author: AwAjie 139576615+ajdgg@users.noreply.github.com
+ * @Date: 2024-07-07 23:43:24
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2024-08-27 20:33:54
+ * @FilePath: \awajie-help\src\page\index.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <script setup>
 </script>
 
