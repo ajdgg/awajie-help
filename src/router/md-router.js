@@ -32,13 +32,13 @@ export { mdRouter };
 const RedirectionRouter = [
     { path: '/xjie-weather/',
         children: [
-            { path: '', redirect: '/doc?id=xjie-weather&file=index'},
+            { path: '', redirect: '/doc?id=xjie-weather'},
             { path: 'amap', redirect: '/doc?id=xjie-weather&file=amap' }
         ]
     },
     { path: '/xjie-calc24/',
         children: [
-            { path: '', redirect: '/doc?id=calc24&file=index'}
+            { path: '', redirect: '/doc?id=calc24'}
         ]
     }
 ]

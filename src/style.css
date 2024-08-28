@@ -87,6 +87,7 @@ body {
 @font-face {
   font-family: "almmInter";
   src: url('./assets/fonts/AlimamaShuHeiTi-Bold.woff2') format('woff2');
+  font-display: swap;
 }
 h2 {
   font-size: 1.35rem;
@@ -115,7 +116,7 @@ button {
   max-width: 1500px;
   display: flex;
   flex: 1;
-  /* overflow-y: auto; */
+  overflow-y: auto;
 }
 #main {
   flex: auto;

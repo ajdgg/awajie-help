@@ -1,3 +1,8 @@
+<!--
+ * @coding: UTF-8
+ * @Author: AwAjie
+ * @Date: 2024-07-07 23:43:24
+-->
 <script setup>
 import { ref, onMounted } from 'vue'
 import xjieHeather from './components/xjie-heather.vue';
